@@ -65,25 +65,21 @@ def apply(move, board, player):
 
 
 if __name__ == '__main__':
-
-    # Press the green button in the gutter to run the script.
-    if __name__ == '__main__':
-        board_str = """\
+    board_str = """\
         ...
         ...
         ...
         """
 
+    board = board_from_string(board_str)
+    player = student = 'X'
+    print(board)
+    display(board)
 
-        board = board_from_string(board_str)
-        player = student = 'X'
-        print(board)
+    while not Terminal(board).is_terminal():
+        move_function = student_optimal if player == student else server_optimal
+        move = move_function(board, player)
+        print(f"{player} plays {move}:")
+        apply(move, board, player)
         display(board)
-
-        while not Terminal(board).is_terminal():
-            move_function = student_optimal if player == student else server_optimal
-            move = move_function(board, player)
-            print(f"{player} plays {move}:")
-            apply(move, board, player)
-            display(board)
-            player = opponent(player)
+        player = opponent(player)
