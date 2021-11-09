@@ -1,6 +1,6 @@
-from action import optimal_move as student_optimal
-from action import server_optimal
-from terminal import *
+from src.action import optimal_move as student_optimal
+from src.action import server_optimal
+from src.terminal import *
 
 
 def board_from_string(board_str):

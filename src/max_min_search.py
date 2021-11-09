@@ -1,5 +1,5 @@
-from terminal import *
-from util import *
+from src.terminal import *
+from src.util import *
 import math
 
 

@@ -1,5 +1,4 @@
-from max_min_search import *
-
+from src.max_min_search import *
 
 def sort_helper(v):
     return -v[0], v[1]
